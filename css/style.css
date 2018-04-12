@@ -1,80 +1,114 @@
-body, html{
+body, html {
   height:100%;
   margin:0;
-  font-size:16px;
-  font-family:"Lato", sans-serif;
-  font-weight:400;
-  line-height:1.8em;
-  color:#666;
+  padding: 0;
+  font-size:1.5vw;
+  font-family: 'Poppins', sans-serif;
+  font-weight:normal;
+  color:#333;
+  overflow-x: hidden;
 }
 
-.pimg1, .pimg2, .pimg3{
+.parallaxHeaderImage, .parallaxSpacerImage  {
   position:relative;
-  opacity:0.70;
   background-position:center;
   background-size:cover;
   background-repeat:no-repeat;
 
   /*
-    fixed = parallax
-    scroll = normal
+  fixed = parallax
+  scroll = normal
   */
   background-attachment:fixed;
 }
 
-.pimg1{
-  background-image:url('../img/image1.jpg');
-  min-height:100%;
+.parallaxHeaderImage {
+  background-image:url('../img/bg/m-header.png');
+  min-height:80%;
 }
 
-.pimg2{
-  background-image:url('../img/image2.jpg');
-  min-height:400px;
+.parallaxImage{
+  width:50%;
+  max-width: 400px;
 }
 
-.pimg3{
-  background-image:url('../img/image3.jpg');
-  min-height:400px;
+.parallaxImage:before {
+  content: "";
+  background-image: url('../img/m-brand.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  padding-top: 100%; 	/* initial ratio of 1:1*/
 }
 
-.section{
+.parallaxSpacerImage {
+  background-image:url('../img/keyboard-illustrate-70.jpg');
+  min-height:50%;
+}
+
+.parallaxText {
   text-align:center;
-  padding:50px 80px;
-}
-
-.section-light{
-  background-color:#f4f4f4;
-  color:#666;
-}
-
-.section-dark{
-  background-color:#282e34;
-  color:#ddd;
-}
-
-.ptext{
-  position:absolute;
-  top:50%;
-  width:100%;
-  text-align:center;
-  color:#000;
-  font-size:27px;
-  letter-spacing:8px;
+  color:#000000;
+  font-size:12vw;
   text-transform:uppercase;
 }
 
-.ptext .border{
-  background-color:#111;
-  color:#fff;
+.parallaxText .parallaxBorder {
+  background-color:#333333;
+  color:#FF9900;
   padding:20px;
 }
 
-.ptext .border.trans{
-  background-color:transparent;
-}
-
-@media(max-width:568px){
-  .pimg1, .pimg2, .pimg3{
+@media(max-width:568px) {
+  .parallaxHeaderImage, .parallaxSpacerImage{
     background-attachment:scroll;
   }
+}
+
+.section {
+  text-align:center;
+  padding:50px 80px;
+  min-height: 100%;
+  height: auto;
+}
+
+.section-light {
+  background-color:#FFFFFF;
+  color:#333333;
+}
+
+.section-dark {
+  background-color:#333333;
+  color:#FF9900;
+}
+
+.section h2 {
+  text-transform:uppercase;
+  font-size: 12vw;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer{
+  background-color: #FFFFFF;
+  width: 100%;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+
+.footer div{
+  width: 20%;
+  align-self: center;
+}
+
+.footer-right a img {
+  height:5vh;
+  vertical-align: middle;
 }
