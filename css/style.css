@@ -2,7 +2,7 @@ body, html {
   height:100%;
   margin:0;
   padding: 0;
-  font-size:1.5vw;
+  font-size:2.5vw;
   font-family: 'Poppins', sans-serif;
   font-weight:normal;
   color:#333;
@@ -90,9 +90,16 @@ body, html {
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
 }
 
 .footer{
