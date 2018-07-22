@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Marcel Meier</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS  -->
+  <link href="css/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <div class="parallaxHeaderImage flex-container flex-row">
-    <div class="parallaxImage"></div>
+
+  <div class="parallax-container flex-container">
+    <div class="m-heading"><img src="img/m-brand.png" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img src="img/bg/m-header.png" alt="Unsplashed background img 1"></div>
   </div>
 
   <section class="section section-light flex-container flex-column">
@@ -22,12 +23,11 @@
     <p>Im Folgenden könnt ihr eine Überblick über meine unterschiedlichen Interessen und Projekte gewinnen oder meine verlinkten Profile durchstöbern</p>
   </section>
 
-  <div class="parallaxSpacerImage flex-container flex-row">
-    <div class="parallaxText">
-      <span class="parallaxBorder">
+  <div class="parallax-container flex-container">
+    <div class="parallax-heading">
         Projekte
-      </span>
     </div>
+    <div class="parallax"><img src="img/keyboard-illustrate.jpg" alt="Unsplashed background img 2"></div>
   </div>
 
   <section class="section section-dark">
@@ -39,6 +39,7 @@
       </a>
     </div>
   </section>
+
   <div class="footer flex-container">
     <div class="footer-left">
       &copy; Marcel Meier
@@ -50,5 +51,11 @@
       </a>
     </div>
   </div>
-</body>
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="js/materialize.min.js"></script>
+  <script src="js/parallax.js"></script>
+
+  </body>
 </html>

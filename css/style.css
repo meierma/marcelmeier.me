@@ -6,63 +6,6 @@ body, html {
   font-family: 'Poppins', sans-serif;
   font-weight:normal;
   color:#333;
-  overflow-x: hidden;
-}
-
-.parallaxHeaderImage, .parallaxSpacerImage  {
-  position:relative;
-  background-position:center;
-  background-size:cover;
-  background-repeat:no-repeat;
-
-  /*
-  fixed = parallax
-  scroll = normal
-  */
-  background-attachment:fixed;
-}
-
-.parallaxHeaderImage {
-  background-image:url('../img/bg/m-header.png');
-  min-height:80%;
-}
-
-.parallaxImage{
-  width:50%;
-  max-width: 400px;
-}
-
-.parallaxImage:before {
-  content: "";
-  background-image: url('../img/m-brand.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: block;
-  padding-top: 100%; 	/* initial ratio of 1:1*/
-}
-
-.parallaxSpacerImage {
-  background-image:url('../img/keyboard-illustrate-70.jpg');
-  min-height:50%;
-}
-
-.parallaxText {
-  text-align:center;
-  color:#000000;
-  font-size:12vw;
-  text-transform:uppercase;
-}
-
-.parallaxText .parallaxBorder {
-  background-color:#333333;
-  color:#FF9900;
-  padding:20px;
-}
-
-@media(max-width:568px) {
-  .parallaxHeaderImage, .parallaxSpacerImage{
-    background-attachment:scroll;
-  }
 }
 
 .section {
@@ -70,6 +13,25 @@ body, html {
   padding:50px 80px;
   min-height: 100%;
   height: auto;
+}
+
+.m-heading {
+  margin: 0 auto;
+  align-self: center;
+}
+
+.m-heading img{
+  height: 40vh;
+}
+
+.parallax-heading{
+  text-align:center;
+  color:#000000;
+  font-size:12vw;
+  text-transform:uppercase;
+  background-color:#333333;
+  color:#FF9900;
+  padding:20px;
 }
 
 .section-light {
@@ -108,10 +70,10 @@ body, html {
   justify-content: space-between;
   text-align: center;
   align-items: center;
+
 }
 
 .footer div{
-  width: 20%;
   align-self: center;
 }
 
