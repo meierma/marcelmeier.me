@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# User-specific stuff
+.idea/*
+
+Homepage.iml
