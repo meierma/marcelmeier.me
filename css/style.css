@@ -2,36 +2,18 @@ body, html {
     height: 100%;
     margin: 0;
     padding: 0;
-    font-size: 2.5vw;
     font-family: 'Poppins', sans-serif;
-    font-weight: normal;
     color: #333;
+}
+
+p {
+    font-size: 18px;
 }
 
 .section {
     text-align: center;
-    padding: 50px 80px;
-    min-height: 100%;
-    height: auto;
-}
-
-.m-heading {
-    margin: 0 auto;
-    align-self: center;
-}
-
-.m-heading img {
-    height: 40vh;
-}
-
-.parallax-heading {
-    text-align: center;
-    color: #000000;
-    font-size: 12vw;
-    text-transform: uppercase;
-    background-color: #333333;
-    color: #FF9900;
-    padding: 20px;
+    padding: 50px 20%;
+    min-height: 80%;
 }
 
 .section-light {
@@ -46,7 +28,29 @@ body, html {
 
 .section h2 {
     text-transform: uppercase;
-    font-size: 12vw;
+}
+
+.m-heading {
+    margin: 0 auto;
+    align-self: center;
+}
+
+.m-heading img {
+    height: 200px;
+}
+
+.parallax-heading {
+    text-align: center;
+    color: #000000;
+    font-size: 5vw;
+    text-transform: uppercase;
+    background-color: #333333;
+    color: #FF9900;
+    padding: 20px;
+}
+
+.parallax-keyboard {
+    height:200px;
 }
 
 .flex-container {
@@ -80,14 +84,4 @@ body, html {
 .footer-right a img {
     height: 5vh;
     vertical-align: middle;
-}
-
-@media screen and (min-width: 1000px) {
-    h2 {
-        font-size: 36px;
-    }
-
-    p {
-        font-size: 24px;
-    }
 }
