@@ -23,7 +23,7 @@
       }
     },
     "opacity": {
-      "value": 0.5,
+      "value": 0.2,
       "random": false,
       "anim": {
         "enable": false,
@@ -46,7 +46,7 @@
       "enable": true,
       "distance": 80,
       "color": "#000000",
-      "opacity": 0.1,
+      "opacity": 0.2,
       "width": 1
     },
     "move": {
@@ -79,9 +79,9 @@
     },
     "modes": {
       "grab": {
-        "distance": 150,
+        "distance": 100,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.4
         }
       },
       "bubble": {

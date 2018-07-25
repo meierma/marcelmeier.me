@@ -31,7 +31,6 @@ p {
 .section-content{
     padding: 50px 20%;
     height: 100%;
-    z-index: 1;
 }
 
 .particle-container{

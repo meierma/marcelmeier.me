@@ -20,9 +20,6 @@
         "nb_sides": 5
       },
       "image": {
-        "src": "img/github.svg",
-        "width": 100,
-        "height": 100
       }
     },
     "opacity": {
@@ -82,9 +79,9 @@
     },
     "modes": {
       "grab": {
-        "distance": 150,
+        "distance": 100,
         "line_linked": {
-          "opacity": 1
+          "opacity": 0.4
         }
       },
       "bubble": {
