@@ -1,7 +1,10 @@
-body, html {
-    height: 100%;
+*{
     margin: 0;
     padding: 0;
+}
+
+body, html {
+    height: 100%;
     font-family: 'Poppins', sans-serif;
     color: #333;
 }
@@ -12,7 +15,6 @@ p {
 
 .section {
     text-align: center;
-    padding: 50px 20%;
     min-height: 80%;
 }
 
@@ -26,9 +28,23 @@ p {
     color: #FF9900;
 }
 
-.section h2 {
-    text-transform: uppercase;
+.section-content{
+    padding: 50px 20%;
+    height: 100%;
 }
+
+.particle-container{
+    position: relative;
+}
+
+.particle{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 
 .m-heading {
     margin: 0 auto;
