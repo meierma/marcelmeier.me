@@ -71,6 +71,22 @@ p {
     outline-offset: -8px;
 }
 
+.parallax-container {
+    height: 500px;
+}
+
+.parallax {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+}
+
+.parallax img {
+    min-width: 100%;
+    height: 100%;
+}
+
 .parallax-keyboard {
     height:200px;
 }
