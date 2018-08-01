@@ -107,19 +107,29 @@ p {
 }
 
 .footer {
-    background-color: #FFFFFF;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
     text-align: center;
     align-items: center;
-
+    height: 200px;
+    font-size: 50px;
 }
 
-.footer div {
-    align-self: center;
+.footer a{
+    text-decoration: none;
 }
 
-.footer-right a img {
-    height: 5vh;
-    vertical-align: middle;
+.footer a div{
+    background: #FF9900;
+    width: 100px;
+    height: 100px;
+    color: white;
+}
+
+.footer a div:hover{
+    background: #FFF;
+    color: #FF9900;
+    width: 96px;
+    height: 96px;
+    border: 2px #FF9900 solid;
 }
