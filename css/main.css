@@ -26,6 +26,10 @@ section {
 	background: linear-gradient(90deg, rgba(45, 45, 45, 1) 0%, rgba(28, 28, 28, 1) 100%);
 }
 
+section h2{
+	color: white;
+}
+
 .fullpage {
 	min-height: 100%;
 	display: flex;
