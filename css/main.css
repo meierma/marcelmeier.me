@@ -1,45 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('all.min.css');
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
 }
 
-html, body {
-	height: 100%;
-	font-family: 'Comfortaa', cursive;
+:root {
+    --dark-color: #141414;
+    --light-color: #FFF;
+    --accent-color: rgb(101, 221, 121);
+    --parallax-height: 1000px;
+    /*Geschwindigkeit*/
+    --max-parallax-scroll: -0.17s;
 }
 
-header {
-	background-image: url(../images/volcano.jpg);
-	background-attachment: fixed;
-	background-position: bottom;
-	background-repeat: no-repeat;
-	background-size: cover;
-	font-size: 15vw;
-	color: white;
-}
-header h2 {
-	border-bottom: 1px solid white;
-}	
-
-section {
-	background: rgb(45, 45, 45);
-	background: linear-gradient(90deg, rgba(45, 45, 45, 1) 0%, rgba(28, 28, 28, 1) 100%);
+html,
+body {
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    background: var(--dark-color);
 }
 
-section h2{
-	color: white;
+.doublepage {
+    min-height: 200%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.onehalfpage {
+    min-height: 150%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .fullpage {
-	min-height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .halfpage {
-	min-height: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    min-height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*Progress Bar*/
+
+.progress {
+    z-index: 100;
+    height: 3px;
+    width: 0%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes progress {
+    to {
+        width: 100%;
+    }
+}
+
+
+/* Header */
+
+header {}
+
+header>img {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+    animation: image 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes image {
+    to {
+        top: calc(var(--parallax-height)*-1);
+    }
+}
+
+header>img:first-of-type {
+    z-index: 0;
+}
+
+header h1 {
+    position: absolute;
+    z-index: 1;
+    font-size: 20vw;
+    border-bottom: 1px solid white;
+    pointer-events: none;
+    text-shadow: .01em .01em 0 var(--accent-color);
+}
+
+header .header_gradient {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--dark-color), transparent);
+    animation: header_gradient 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes header_gradient {
+    to {
+        bottom: var(--parallax-height);
+    }
+}
+
+header .header_filler {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: var(--accent-color);
+    animation: header_filler 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@keyframes header_filler {
+    to {
+        height: var(--parallax-height);
+    }
+}
+
+header .header_filler .links {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .header_filler .links a {
+    color: var(--light-color);
+}
+
+header .header_filler .links a i {
+    text-shadow: .01em .01em 0.1em var(--dark-color);
+}
+
+header .header_filler .links i:hover {
+    animation: links 0.5s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes links {
+    to {
+        transform: rotateZ(-45deg);
+    }
+}
+
+
+/* Section Slide */
+
+.section_slide {
+    overflow: hidden;
+    z-index: 3;
+    background: var(--dark-color);
+    flex-direction: column;
+}
+
+.section_slide .slide-in {
+    opacity: 0;
+}
+
+.section_slide .active {
+    animation: slide-in 1s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes slide-in {
+    to {
+        opacity: 1;
+    }
+}
+
+.section_slide h2 {
+    display: inline-block;
+    color: white;
+    font-size: 5vw;
+    text-shadow: .03em .03em 0 var(--accent-color);
+}
+
+
+/* Section Slide */
+
+.section_contact .contact-me {
+    width: 80vw;
+    height: 80vh;
+    background: var(--accent-color);
+}
+
+
+/* Footer */
+
+footer {
+    background: white;
 }
