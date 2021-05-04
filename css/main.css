@@ -1,245 +1,288 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-@import url('all.min.css');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    position: relative;
-}
-
-:root {
-    --dark-color: #141414;
-    --light-color: #FFF;
-    --accent-color: rgb(101, 221, 121);
-    --parallax-height: 1000px;
-    /*Geschwindigkeit*/
-    --max-parallax-scroll: -0.17s;
-}
-
-html,
-body {
-    height: 100%;
-    font-family: 'Quicksand', sans-serif;
-    color: white;
-    background: var(--dark-color);
-}
-
-.doublepage {
-    min-height: 200%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.onehalfpage {
-    min-height: 150%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.fullpage {
-    min-height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.halfpage {
-    min-height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-/*Progress Bar*/
-
-.progress {
-    z-index: 100;
-    height: 3px;
-    width: 0%;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    animation: progress 1s linear;
-    /* Pause the animation */
-    animation-play-state: paused;
-    /* Bind the animation to scroll */
-    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
-
-@keyframes progress {
-    to {
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+    @import url('all.min.css');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        position: relative;
+    }
+    
+     :root {
+        --dark-color: #141414;
+        --light-color: #FFF;
+        --accent-color: rgb(101, 221, 121);
+        --parallax-height: 1000px;
+        /*Geschwindigkeit*/
+        --max-parallax-scroll: -0.17s;
+    }
+    
+    html,
+    body {
+        height: 100%;
+        font-family: 'Quicksand', sans-serif;
+        color: white;
+        background: var(--dark-color);
+    }
+    
+    .doublepage {
+        min-height: 200%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .onehalfpage {
+        min-height: 150%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .fullpage {
+        min-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .halfpage {
+        min-height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Progress Bar*/
+    
+    .progress {
+        z-index: 100;
+        height: 3px;
+        width: 0%;
+        background-color: #fff;
+        position: fixed;
+        top: 0;
+        left: 0;
+        animation: progress 1s linear;
+        /* Pause the animation */
+        animation-play-state: paused;
+        /* Bind the animation to scroll */
+        animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes progress {
+        to {
+            width: 100%;
+        }
+    }
+    /* Header */
+    
+    header {}
+    
+    header>img {
+        z-index: 5;
+        position: absolute;
         width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        pointer-events: none;
+        /*clip-path: circle(180vh at 50% -80vh);*/
+        animation: image 1s linear;
+        /* Pause the animation */
+        animation-play-state: paused;
+        /* Bind the animation to scroll */
+        animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
     }
-}
-
-
-/* Header */
-
-header {}
-
-header>img {
-    z-index: 5;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    pointer-events: none;
-    animation: image 1s linear;
-    /* Pause the animation */
-    animation-play-state: paused;
-    /* Bind the animation to scroll */
-    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
-
-@keyframes image {
-    to {
-        top: calc(var(--parallax-height)*-1);
+    
+    @keyframes image {
+        to {
+            top: calc(var(--parallax-height)*-1);
+        }
     }
-}
-
-header>img:first-of-type {
-    z-index: 0;
-}
-
-header h1 {
-    position: absolute;
-    z-index: 1;
-    font-size: 20vw;
-    border-bottom: 1px solid white;
-    pointer-events: none;
-    text-shadow: .01em .01em 0 var(--accent-color);
-}
-
-header .header_gradient {
-    z-index: 10;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, var(--dark-color), transparent);
-    animation: header_gradient 1s linear;
-    /* Pause the animation */
-    animation-play-state: paused;
-    /* Bind the animation to scroll */
-    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
-
-@keyframes header_gradient {
-    to {
-        bottom: var(--parallax-height);
+    
+    header>img:first-of-type {
+        z-index: 0;
     }
-}
-
-header .header_filler {
-    z-index: 3;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 0;
-    background: var(--accent-color);
-    animation: header_filler 1s linear;
-    /* Pause the animation */
-    animation-play-state: paused;
-    /* Bind the animation to scroll */
-    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-@keyframes header_filler {
-    to {
-        height: var(--parallax-height);
+    
+    header h1 {
+        position: absolute;
+        z-index: 1;
+        font-size: 20vw;
+        border-bottom: 1px solid white;
+        pointer-events: none;
+        text-shadow: .01em .01em 0 var(--accent-color);
     }
-}
-
-header .header_filler .links {
-    width: 100%;
-    max-width: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-
-header .header_filler .links a {
-    color: var(--light-color);
-}
-
-header .header_filler .links a i {
-    text-shadow: .01em .01em 0.1em var(--dark-color);
-}
-
-header .header_filler .links i:hover {
-    animation: links 0.5s linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
-
-@keyframes links {
-    to {
-        transform: rotateZ(-45deg);
+    
+    header .header_gradient {
+        z-index: 10;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, var(--dark-color), transparent);
+        animation: header_gradient 1s linear;
+        /* Pause the animation */
+        animation-play-state: paused;
+        /* Bind the animation to scroll */
+        animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
     }
-}
-
-
-/* Section Slide */
-
-.section_slide {
-    overflow: hidden;
-    z-index: 3;
-    background: var(--dark-color);
-    flex-direction: column;
-}
-
-.section_slide .slide-in {
-    opacity: 0;
-}
-
-.section_slide .active {
-    animation: slide-in 1s linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
-
-@keyframes slide-in {
-    to {
-        opacity: 1;
+    
+    @keyframes header_gradient {
+        to {
+            bottom: var(--parallax-height);
+        }
     }
-}
-
-.section_slide h2 {
-    display: inline-block;
-    color: white;
-    font-size: 5vw;
-    text-shadow: .03em .03em 0 var(--accent-color);
-}
-
-
-/* Section Slide */
-
-.section_contact .contact-me {
-    width: 80vw;
-    height: 80vh;
-    background: var(--accent-color);
-}
-
-
-/* Footer */
-
-footer {
-    background: white;
-}
+    
+    header .header_filler {
+        z-index: 3;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        background: var(--accent-color);
+        animation: header_filler 1s linear;
+        /* Pause the animation */
+        animation-play-state: paused;
+        /* Bind the animation to scroll */
+        animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    @keyframes header_filler {
+        to {
+            height: var(--parallax-height);
+        }
+    }
+    
+    header .header_filler .links {
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    header .header_filler .links a {
+        color: var(--light-color);
+    }
+    
+    header .header_filler .links a i {
+        text-shadow: .01em .01em 0.1em var(--dark-color);
+    }
+    
+    header .header_filler .links i:hover {
+        animation: links 0.5s linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes links {
+        to {
+            transform: rotateZ(-45deg);
+        }
+    }
+    /* Section Slide */
+    
+    .section_slide {
+        overflow: hidden;
+        z-index: 3;
+        background: var(--dark-color);
+        flex-direction: column;
+    }
+    
+    .section_slide .slide-in {
+        opacity: 0;
+    }
+    
+    .section_slide .active {
+        animation: slide-in 1s linear;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+    }
+    
+    @keyframes slide-in {
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .section_slide h2 {
+        color: white;
+        font-size: 5vw;
+        text-shadow: .03em .03em 0 var(--accent-color);
+    }
+    /* Section Slide */
+    
+    .section_contact .contact-me {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        padding: 5vw;
+        background: var(--accent-color);
+    }
+    
+    .section_contact .contact-me h2 {
+        padding-top: 10px;
+        color: var(--dark-color);
+        text-align: center;
+        padding-bottom: 4vh;
+    }
+    
+    .section_contact .contact-me input,
+    .section_contact .contact-me textarea {
+        padding: 10px;
+        background: transparent;
+        outline: none;
+        color: var(--dark-color);
+        border: solid 1px var(--dark-color);
+        border-bottom: none;
+        transition: all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -ms-transition: all 0.3s ease-in-out;
+        font-family: 'Quicksand', sans-serif;
+        border-bottom: solid 1px var(--dark-color);
+        border-radius: 1vw;
+        margin-bottom: 1vh;
+        resize: vertical;
+    }
+    
+    .section_contact .contact-me input:hover,
+    .section_contact .contact-me textarea:hover,
+    .section_contact .contact-me input:focus,
+    .section_contact .contact-me textarea:focus {
+        background: var(--dark-color);
+        color: var(--light-color);
+    }
+    
+    .section_contact .contact-me a {
+        text-decoration: none;
+        text-align: right;
+        font-size: max(2vw, 18px);
+        color: var(--dark-color);
+    }
+    
+    @keyframes color_anim {
+        0% {
+            fill: white;
+        }
+        50% {
+            fill: var(--dark-color);
+        }
+        100% {
+            fill: white;
+        }
+    }
+    /* Footer */
+    
+    footer {}
