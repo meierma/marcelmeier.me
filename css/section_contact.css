@@ -28,12 +28,12 @@
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Jost', 'Quicksand', sans-serif;
     border-bottom: solid 1px var(--dark-color);
     border-radius: 1vw;
     margin-bottom: 1vh;
     resize: vertical;
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
 .section_contact .contact-me textarea {

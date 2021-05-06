@@ -2,39 +2,7 @@
 
 .section_cv {
     overflow: hidden;
-    z-index: 3;
     background: var(--dark-color);
     flex-direction: column;
     justify-content: space-evenly !important;
-}
-
-.section_cv .slide-in {
-    opacity: 0;
-}
-
-.section_cv .active {
-    animation: slide-in 0.5s linear;
-    animation-iteration-count: 1;
-    animation-fill-mode: both;
-}
-
-@keyframes slide-in {
-    0% {
-        opacity: 0;
-        left: 25px
-    }
-    100% {
-        opacity: 1;
-        left: 0;
-    }
-}
-
-.section_cv h2 {
-    color: white;
-}
-
-.section_cv img {
-    height: 40vh;
-    border: 3px solid var(--light-color);
-    border-radius: 50%;
 }

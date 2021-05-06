@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500&display=swap');
 @import url('all.min.css');
 @import url('header.css');
+@import url('section_about.css');
 @import url('section_cv.css');
 @import url('section_contact.css');
 * {
@@ -22,7 +24,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Jost', 'Quicksand', sans-serif;
     color: white;
     background: var(--dark-color);
     scroll-snap-type: proximity;
@@ -61,6 +63,7 @@ body {
 
 h1 {
     font-size: 20vw;
+    font-weight: 200;
     border-bottom: 1px solid white;
     text-shadow: .01em .01em 0 var(--accent-color);
 }
@@ -88,7 +91,7 @@ h3 {
     /* Pause the animation */
     animation-play-state: paused;
     /* Bind the animation to scroll */
-    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+    animation-delay: calc(var(--scroll) * -1s);
     animation-iteration-count: 1;
     animation-fill-mode: both;
 }
