@@ -4,15 +4,15 @@ const header_gradient = document.querySelector("header .header_gradient");
 const header_filler = document.querySelector("header .header_filler");
 
 const section_text = document.querySelectorAll("section h2");
+const sliders = document.querySelectorAll('.slide-in');
+const hero_text = document.querySelector("#hero_text");
 
 window.addEventListener('scroll', () => {
     document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.scrollHeight - window.innerHeight));
 
-    checkAllSliders();
+    activateAllSlidersWhenVisible();
 });
 
-
-const hero_text = document.querySelector("#hero_text");
 header.addEventListener('mousemove', (e) => {
     let xAxis = (e.pageX - window.innerWidth / 2) / 50;
     let yAxis = (e.pageY - window.innerHeight / 2) / 50;
@@ -20,10 +20,7 @@ header.addEventListener('mousemove', (e) => {
     hero_text.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
 
-
-const sliders = document.querySelectorAll('.slide-in');
-
-function checkAllSliders() {
+function activateAllSlidersWhenVisible() {
     sliders.forEach(slider => {
         var rect = slider.getBoundingClientRect();
         var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);

@@ -1,0 +1,113 @@
+/* Header */
+
+header {}
+
+header>img {
+    z-index: 5;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    pointer-events: none;
+    /*clip-path: circle(180vh at 50% -80vh);*/
+    animation: image 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes image {
+    to {
+        top: calc(var(--parallax-height)*-1);
+    }
+}
+
+header>img:first-of-type {
+    z-index: 0;
+}
+
+header h1 {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+header .header_gradient {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, var(--dark-color), transparent);
+    animation: header_gradient 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes header_gradient {
+    to {
+        bottom: var(--parallax-height);
+    }
+}
+
+header .header_filler {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background: var(--accent-color);
+    animation: header_filler 1s linear;
+    /* Pause the animation */
+    animation-play-state: paused;
+    /* Bind the animation to scroll */
+    animation-delay: max(calc(var(--scroll) * -1s), var(--max-parallax-scroll));
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@keyframes header_filler {
+    to {
+        height: var(--parallax-height);
+    }
+}
+
+header .header_filler .links {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header .header_filler .links a {
+    color: var(--light-color);
+}
+
+header .header_filler .links a i {
+    text-shadow: .01em .01em 0.1em var(--dark-color);
+}
+
+header .header_filler .links i:hover {
+    animation: links 0.5s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+@keyframes links {
+    to {
+        transform: rotateZ(-45deg);
+    }
+}
