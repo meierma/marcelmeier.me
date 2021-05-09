@@ -10,12 +10,14 @@
     padding: 0;
     box-sizing: border-box;
     position: relative;
+    font-weight: 300;
 }
 
  :root {
     --dark-color: #141414;
     --light-color: #FFF;
     --accent-color: rgb(230, 33, 33);
+    --accent-gradient: linear-gradient(0deg, rgb(230, 33, 33), rgb(230, 112, 33));
     --parallax-height: 1000px;
     /*Geschwindigkeit*/
     --max-parallax-scroll: -0.17s;
@@ -63,9 +65,18 @@ body {
 
 h1 {
     font-size: 20vw;
-    font-weight: 200;
     border-bottom: 1px solid white;
-    text-shadow: .01em .01em 0 var(--accent-color);
+    background: var(--accent-color);
+    background-image: var(--accent-gradient);
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
 }
 
 h2 {

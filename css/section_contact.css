@@ -1,7 +1,7 @@
 /* Section Contact */
 
 .section_contact {
-    background: var(--accent-color);
+    background: var(--accent-gradient);
 }
 
 .section_contact .contact-me {

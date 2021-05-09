@@ -65,7 +65,7 @@ header .header_filler {
     bottom: 0;
     width: 100%;
     height: 0;
-    background: var(--accent-color);
+    background: var(--accent-gradient);
     animation: header_filler 1s linear;
     /* Pause the animation */
     animation-play-state: paused;
