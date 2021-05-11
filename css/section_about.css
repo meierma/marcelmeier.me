@@ -33,6 +33,18 @@
     color: white;
 }
 
+.section_about .about_headline {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section_about .about_text {
+    font-size: 1vw;
+    width: 50vw;
+    text-align: center;
+}
+
 .section_about img {
     height: 40vh;
     border: 3px solid var(--light-color);

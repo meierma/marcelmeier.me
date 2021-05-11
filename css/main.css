@@ -13,11 +13,11 @@
     font-weight: 300;
 }
 
- :root {
+:root {
     --dark-color: #141414;
     --light-color: #FFF;
-    --accent-color: rgb(230, 33, 33);
-    --accent-gradient: linear-gradient(0deg, rgb(230, 33, 33), rgb(230, 112, 33));
+    --accent-color: #e62121;
+    --accent-gradient: linear-gradient(0deg, #e62121, #e63821);
     --parallax-height: 1000px;
     /*Geschwindigkeit*/
     --max-parallax-scroll: -0.17s;
@@ -66,17 +66,6 @@ body {
 h1 {
     font-size: 20vw;
     border-bottom: 1px solid white;
-    background: var(--accent-color);
-    background-image: var(--accent-gradient);
-    /* Set the background size and repeat properties. */
-    background-size: 100%;
-    background-repeat: repeat;
-    /* Use the text as a mask for the background. */
-    /* This will show the gradient as a text color rather than element bg. */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
 }
 
 h2 {
@@ -85,6 +74,10 @@ h2 {
 
 h3 {
     font-size: 3vw;
+}
+
+h4 {
+    font-size: 2vw;
 }
 
 
@@ -116,4 +109,6 @@ h3 {
 
 /* Footer */
 
-footer {}
+footer {
+    scroll-snap-align: start;
+}

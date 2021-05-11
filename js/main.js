@@ -13,12 +13,14 @@ window.addEventListener('scroll', () => {
     activateAllSlidersWhenVisible();
 });
 
+/*
 header.addEventListener('mousemove', (e) => {
     let xAxis = (e.pageX - window.innerWidth / 2) / 50;
     let yAxis = (e.pageY - window.innerHeight / 2) / 50;
 
     hero_text.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
 });
+*/
 
 function activateAllSlidersWhenVisible() {
     sliders.forEach(slider => {
