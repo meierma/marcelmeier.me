@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500&display=swap');
-@import url('all.min.css');
 @import url('header.css');
+@import url('footer.css');
 @import url('section_about.css');
 @import url('section_cv.css');
 @import url('section_contact.css');
@@ -17,7 +17,7 @@
     --dark-color: #141414;
     --light-color: #FFF;
     --accent-color: #e62121;
-    --accent-gradient: linear-gradient(0deg, #e62121, #e63821);
+    --accent-gradient: linear-gradient(0deg, #926c3a, #836231);
     --parallax-height: 1000px;
     /*Geschwindigkeit*/
     --max-parallax-scroll: -0.17s;
@@ -32,6 +32,16 @@ body {
     scroll-snap-type: proximity;
     scroll-snap-points-y: repeat(100px);
     scroll-snap-type: y proximity;
+}
+
+.fixed {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 2;
 }
 
 .doublepage {
@@ -51,7 +61,7 @@ body {
 .fullpage {
     min-height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     scroll-snap-align: start;
 }
@@ -59,24 +69,27 @@ body {
 .halfpage {
     min-height: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 h1 {
-    font-size: 20vw;
-    border-bottom: 1px solid white;
+    font-size: 15vw;
 }
 
 h2 {
-    font-size: 5vw;
+    font-size: 8vw;
 }
 
 h3 {
-    font-size: 3vw;
+    font-size: 5vw;
 }
 
 h4 {
+    font-size: 3vw;
+}
+
+p {
     font-size: 2vw;
 }
 
@@ -104,11 +117,4 @@ h4 {
     to {
         width: 100%;
     }
-}
-
-
-/* Footer */
-
-footer {
-    scroll-snap-align: start;
 }

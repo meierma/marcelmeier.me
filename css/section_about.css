@@ -21,11 +21,11 @@
 @keyframes slide-in {
     0% {
         opacity: 0;
-        left: 15vw;
+        top: 15vh;
     }
     100% {
         opacity: 1;
-        left: 0;
+        top: 0;
     }
 }
 
@@ -40,8 +40,7 @@
 }
 
 .section_about .about_text {
-    font-size: 1vw;
-    width: 50vw;
+    width: 75vw;
     text-align: center;
 }
 

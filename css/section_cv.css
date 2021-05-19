@@ -2,7 +2,8 @@
 
 .section_cv {
     overflow: hidden;
-    background: var(--dark-color);
+    background: var(--light-color);
     flex-direction: column;
     justify-content: space-evenly !important;
+    z-index: 3;
 }

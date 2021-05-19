@@ -8,7 +8,12 @@ const sliders = document.querySelectorAll('.slide-in');
 const hero_text = document.querySelector("#hero_text");
 
 window.addEventListener('scroll', () => {
-    document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.scrollHeight - window.innerHeight));
+    let scroll = window.pageYOffset / (document.body.scrollHeight - window.innerHeight);
+    //document.body.style.setProperty('--scroll', scroll);
+
+    if (scroll < 0.5) hero_text.innerHTML = "Moin Moin";
+    else if (scroll > 0.50) hero_text.innerHTML = "Tschüssi";
+
 
     activateAllSlidersWhenVisible();
 });

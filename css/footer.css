@@ -1,0 +1,11 @@
+/* Footer */
+
+footer {
+    scroll-snap-align: start;
+    background: var(--dark-color);
+}
+
+footer h4 {
+    position: absolute;
+    bottom: 2vh;
+}
