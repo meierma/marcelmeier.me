@@ -1,25 +1,19 @@
 /* Section Contact */
 
-.section_contact {
-    z-index: 3;
-    background: var(--light-color);
-}
-
-.section_contact .contact-me {
+.section__contact_me .contact-me {
     display: flex;
     flex-direction: column;
     width: 100vw;
     padding: 5vw;
 }
 
-.section_contact .contact-me h2 {
-    color: var(--dark-color);
+.section__contact_me .contact-me h2 {
     text-align: center;
     padding-bottom: 4vh;
 }
 
-.section_contact .contact-me input,
-.section_contact .contact-me textarea {
+.section__contact_me .contact-me input,
+.section__contact_me .contact-me textarea {
     padding: 10px;
     background: transparent;
     outline: none;
@@ -37,37 +31,37 @@
     font-size: 2vw;
 }
 
-.section_contact .contact-me textarea {
+.section__contact_me .contact-me textarea {
     height: 40vh;
 }
 
-.section_contact .contact-me input:hover,
-.section_contact .contact-me textarea:hover,
-.section_contact .contact-me input:focus,
-.section_contact .contact-me textarea:focus {
+.section__contact_me .contact-me input:hover,
+.section__contact_me .contact-me textarea:hover,
+.section__contact_me .contact-me input:focus,
+.section__contact_me .contact-me textarea:focus {
     background: var(--dark-color);
     color: var(--light-color);
 }
 
-.section_contact .contact-me input::placeholder,
-.section_contact .contact-me textarea::placeholder {
+.section__contact_me .contact-me input::placeholder,
+.section__contact_me .contact-me textarea::placeholder {
     color: var(--dark-color);
 }
 
-.section_contact .contact-me input:hover::placeholder,
-.section_contact .contact-me input:focus::placeholder,
-.section_contact .contact-me textarea:hover::placeholder,
-.section_contact .contact-me textarea:focus::placeholder {
+.section__contact_me .contact-me input:hover::placeholder,
+.section__contact_me .contact-me input:focus::placeholder,
+.section__contact_me .contact-me textarea:hover::placeholder,
+.section__contact_me .contact-me textarea:focus::placeholder {
     color: var(--light-color);
 }
 
-.section_contact .contact-me a {
+.section__contact_me .contact-me a {
     text-decoration: none;
     text-align: right;
     font-size: 3vw;
     color: var(--dark-color);
 }
 
-.section_contact .contact-me a:hover {
+.section__contact_me .contact-me a:hover {
     color: var(--light-color);
 }

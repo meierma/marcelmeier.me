@@ -1,9 +1,0 @@
-/* Section CV */
-
-.section_cv {
-    overflow: hidden;
-    background: var(--light-color);
-    flex-direction: column;
-    justify-content: space-evenly !important;
-    z-index: 3;
-}

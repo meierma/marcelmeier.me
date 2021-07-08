@@ -3,9 +3,12 @@
 footer {
     scroll-snap-align: start;
     background: var(--dark-color);
+    z-index: var(--z-back);
+    position: relative;
 }
 
-footer h4 {
+footer h2 {
     position: absolute;
     bottom: 2vh;
+    color: white;
 }

@@ -2,22 +2,16 @@
 
 header {
     overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    z-index: var(--z-back);
+    background: black;
 }
 
 header>img {
-    z-index: 2;
     object-fit: cover;
     width: 100%;
-}
-
-header>img:first-of-type {
-    z-index: 0;
-}
-
-header h1 {
-    position: fixed;
-    z-index: 1;
-    pointer-events: none;
 }
 
 header .header_gradient {
@@ -27,4 +21,13 @@ header .header_gradient {
     width: 100%;
     height: 100px;
     background: linear-gradient(to top, var(--dark-color), transparent);
+    z-index: var(--z-mid);
+}
+
+header .header__scroll-mouse {
+    position: absolute;
+    bottom: 2vh;
+    z-index: var(--z-front);
+    color: white;
+    font-size: var(--h1-font-size);
 }

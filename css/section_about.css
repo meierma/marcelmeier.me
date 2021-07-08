@@ -1,18 +1,17 @@
 /* Section About */
 
-.section_about {
-    overflow: hidden;
-    z-index: 3;
-    background: var(--dark-color);
+
+/*
+.section__about_me {
     flex-direction: column;
     justify-content: space-evenly !important;
 }
 
-.section_about .slide-in {
+.section__about_me .slide-in {
     opacity: 0;
 }
 
-.section_about .active {
+.section__about_me .active {
     animation: slide-in 0.5s linear;
     animation-iteration-count: 1;
     animation-fill-mode: both;
@@ -29,23 +28,61 @@
     }
 }
 
-.section_about h2 {
-    color: white;
-}
-
-.section_about .about_headline {
+.section__about_me .about_headline {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.section_about .about_text {
+.section__about_me .about_text {
     width: 75vw;
     text-align: center;
 }
 
-.section_about img {
+.section__about_me img {
     height: 40vh;
     border: 3px solid var(--light-color);
     border-radius: 50%;
+}*/
+
+
+/*==================== ABOUT ====================*/
+
+.about__img {
+    width: 200px;
+    border-radius: .5rem;
+    justify-self: center;
+    align-self: center;
+}
+
+.about__description {
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about__info {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about__info-title {
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+}
+
+.about__info-name {
+    font-size: var(--smaller-font-size);
+}
+
+.about__info-title,
+.about__info-name {
+    display: block;
+    text-align: center;
+}
+
+.about__buttons {
+    display: flex;
+    justify-content: center;
 }
