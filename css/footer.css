@@ -2,7 +2,7 @@
 
 footer {
     scroll-snap-align: start;
-    background: var(--dark-color);
+    background: black;
     z-index: var(--z-back);
     position: relative;
 }

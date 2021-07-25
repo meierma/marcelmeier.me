@@ -25,8 +25,8 @@
     /*hsl(var(--hue-color), 69%, 61%);*/
     --first-color-second: black;
     /*hsl(var(--hue-color), 69%, 61%);*/
-    --first-color-alt: #7cd214;
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
+    --first-color-alt: #1d2158;
+    --first-color-lighter: #bababa;
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --hero-text-color: white;
     --text-color: hsl(var(--hue-color), 8%, 45%);
@@ -567,5 +567,11 @@ img {
     }
     .contact__inputs {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .container {
+        max-width: 1024px;
     }
 }
