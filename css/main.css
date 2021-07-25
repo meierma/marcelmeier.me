@@ -25,7 +25,7 @@
     /*hsl(var(--hue-color), 69%, 61%);*/
     --first-color-second: black;
     /*hsl(var(--hue-color), 69%, 61%);*/
-    --first-color-alt: #1d2158;
+    --first-color-alt: #2fc54f;
     --first-color-lighter: #bababa;
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --hero-text-color: white;

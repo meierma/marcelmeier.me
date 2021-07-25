@@ -24,10 +24,6 @@
     color: var(--first-color);
 }
 
-.button--white:hover {
-    background-color: #FFF;
-}
-
 .button--flex {
     display: inline-flex;
     align-items: center;
