@@ -12,7 +12,7 @@
     transition: .4s;
 }
 
-.scrollup:hoveR {
+.scrollup:hover {
     background-color: var(--first-color-alt);
 }
 

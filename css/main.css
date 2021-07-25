@@ -183,9 +183,6 @@ main {
 
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: proximity;
-    scroll-snap-points-y: repeat(100px);
-    scroll-snap-type: y proximity;
 }
 
 body {

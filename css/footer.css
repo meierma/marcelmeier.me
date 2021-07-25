@@ -1,7 +1,6 @@
 /* Footer */
 
 footer {
-    scroll-snap-align: start;
     background: black;
     z-index: var(--z-back);
     position: relative;
