@@ -2,7 +2,7 @@
 
 header {
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
     display: flex;
     justify-content: center;
     z-index: var(--z-back);
@@ -20,13 +20,13 @@ header .header_gradient {
     bottom: 0;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top, var(--dark-color), transparent);
+    background: linear-gradient(to top, var(--first-color), transparent);
     z-index: var(--z-mid);
 }
 
 header .header__scroll-mouse {
     position: absolute;
-    bottom: 2vh;
+    bottom: 2%;
     z-index: var(--z-front);
     color: white;
     font-size: var(--h1-font-size);
